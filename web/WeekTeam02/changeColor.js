@@ -9,7 +9,6 @@ function changeColor(val){
     alert("no color selected");
   }
   else if (!isColor(color)) {
-    div.style.backgroundColor = "white";
     alert("not a valid color");
   }
   else
