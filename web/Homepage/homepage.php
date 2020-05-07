@@ -11,6 +11,10 @@
 	<div class="header">
 		<header>
 			<h1>Ryan's CSE 341 Homepage</h1>
+      <?php
+        date_default_timezone_set('America/Boise'); // CDT
+        echo "Today is " , date('d/m/Y'), "\nThe current time is ", date('H:i:s');
+      ?>
 		</header>
 	</div>
 
@@ -44,10 +48,7 @@
   </div>
 
   <br>
-  <?php
-    date_default_timezone_set('America/Boise'); // CDT
-    echo "Today is " , date('d/m/Y'), "\nThe current time is ", date('H:i:s');
-  ?>
+
 
   <!--Footer-->
   <div class="footer">
