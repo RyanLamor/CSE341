@@ -1,0 +1,22 @@
+Create Table speaker(
+ speaker_id SERIAL NOT NULL PRIMARY KEY,
+ firstName varchar(80) NOT NULL,
+ lastName varchar(80) NOT NULL);
+
+Create Table conference(
+ conference_id SERIAL NOT NULL PRIMARY KEY,
+ is_spring BOOLEAN NOT NULL,
+ year int NOT NULL);
+
+Create Table _user(
+ user_id SERIAL NOT NULL PRIMARY KEY,
+ username varchar(80) NOT NULL UNIQUE,
+ password varchar(80),
+ screen_name varchar(80) UNIQUE);
+
+CREATE TABLE note(
+ note_id SERIAL NOT NULL PRIMARY KEY,
+ title varchar(80) NOT NULL,
+ user_id int REFERENCES _user(user_id),
+ speaker_id int REFERENCES speaker(speaker_id),
+ conference_id int REFERENCES conference(conference_id));
