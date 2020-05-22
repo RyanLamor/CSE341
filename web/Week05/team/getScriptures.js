@@ -7,7 +7,7 @@ function getScriptures(){
       book: _book
     },
     function(response){
-      var text = $("<p></p>").text(response);
+      var text = $("<p></p>").html(response);
       $( "body" ).append( text );
     });
   });
