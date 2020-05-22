@@ -27,7 +27,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'head.php';?>
-<script href="getScriptures.js"></script>
+<script src="getScriptures.js"></script>
 <body>
     <h1>Scripture Resources</h1>
     <form onsubmit="getScriptures()">
