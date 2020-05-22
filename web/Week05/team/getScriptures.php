@@ -1,7 +1,8 @@
 <?php
-  session_start();
+  require "dbConnect.php";
+  $db = get_db();
+
   $book = $_POST['book'];
-  $db = $_SESSION['db'];
   $books = "";
 
   $statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
