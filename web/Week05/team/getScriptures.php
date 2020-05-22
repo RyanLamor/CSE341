@@ -17,7 +17,7 @@
     	$verse = $row['verse'];
     	$content = $row['content'];
 
-      $books .= "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p><br>";
+      $books .= "<strong>$book $chapter:$verse</strong> - \"$content\"<br>";
     }
 
 //foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
