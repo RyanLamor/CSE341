@@ -10,7 +10,7 @@ function getScriptures(){
       if ( $("#response").text().length > 0 ){
         $("#response").remove();
       }
-      var text = $("<p id="response"></p>").html(response);
+      var text = $("<p id='response'></p>").html(response);
       $( "body" ).append( text );
     });
   });
