@@ -1,10 +1,5 @@
 <?php
-  $test = $_POST['btn'];
-  echo $test;
+  $url = $_POST['btn'];
+  header( "Location: $url");
 
-  foreach ($_POST['btn'] as $key => $value){
-    if (isset($value)){
-      header( "Location: $value");
-    }
-  }
  ?>
