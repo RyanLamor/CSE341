@@ -1,6 +1,6 @@
 <?php
-  require "dbConnect.php";
-  $db = get_db();
+  session_start();
+  $db = $_SESSION['db'];
 
   $book = $_POST['book'];
   $books = "";
