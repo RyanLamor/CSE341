@@ -3,8 +3,6 @@
   $db = get_db();
   $Map_id = $_POST['map_id'];
 
-  echo $Map_id;
-/*
   $stmt = $db->prepare('SELECT name, singleplayerhighscores FROM maps WHERE map_id=:map_id');
   $stmt->bindValue(':map_id', $Map_id, PDO::PARAM_INT);
   $stmt->execute();
@@ -17,5 +15,5 @@
 
       echo "<p>" . $name . " " . $scores . "</p><br>";
     }
-  */
+  
  ?>
