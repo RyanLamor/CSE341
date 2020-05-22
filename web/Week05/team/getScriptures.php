@@ -19,15 +19,5 @@
 
       $books .= "<strong>$book $chapter:$verse</strong> - \"$content\"<br>";
     }
-
-//foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
-  //{
-  	//$book = $row['book'];
-  	//$chapter = $row['chapter'];
-  	//$verse = $row['verse'];
-  	//$content = $row['content'];
-
-    //$books .= "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p><br>";
-  //}
   echo $books;
  ?>
