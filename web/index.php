@@ -1,5 +1,4 @@
 <?php
-
-  phpinfo();
-
+  header("Location: Homepage/Homepage.php");
+  exit();
 ?>
