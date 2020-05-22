@@ -30,7 +30,7 @@
 <script src="getScriptures.js"></script>
 <body>
     <h1>Scripture Resources</h1>
-    <form onsubmit="getScriptures()">
+    <form onsubmit="return getScriptures()">
         <select id="selectBook">
         <?php
             foreach ($db->query('SELECT DISTINCT book FROM scriptures') as $row)
