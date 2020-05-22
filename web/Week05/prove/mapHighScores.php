@@ -17,10 +17,11 @@
     {
       $name = $row['name'];
       $score = $row['score'];
+      $user = $row['screen_name'];
       $time = $row['time'];
       $date = $row['datecreated'];
 
-      echo "<p>" . $name . " " . $score . " ". $time . " " . $date . "</p><br>";
+      echo "<p>" . $name . " " . $score . " ". $user . " " . $time . " " . $date . "</p><br>";
     }
 
  ?>
