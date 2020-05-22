@@ -1,6 +1,6 @@
 
 <?php
-
+    session_start();
     try
     {
         $dbUrl = getenv('DATABASE_URL');
@@ -16,6 +16,7 @@
         $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $_SESSION['db'] = $db;
     }
     catch (PDOException $ex)
     {
@@ -26,19 +27,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'head.php';?>
+<script href="getScriptures.js"></script>
 <body>
     <h1>Scripture Resources</h1>
-    <form action="">
-        <select>
+    <form onsubmit="getScriptures()">
+        <select id="selectBook">
         <?php
-            foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+            foreach ($db->query('SELECT DISTINCT book FROM scriptures') as $row)
             {
-              $book = $row['book'];
-              $chapter = $row['chapter'];
-              $verse = $row['verse'];
-              $content = $row['content'];
-
-              echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
+                echo '<option value="' . $row['book'] . '">' . $row['book'] . '</option>';
             }
         ?>
         </select>
