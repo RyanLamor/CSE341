@@ -1,5 +1,4 @@
 <?php
-  session_start();
   $book = $_POST['book'];
   $db = $_SESSION['db'];
   $books = "";
