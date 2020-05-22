@@ -1,10 +1,11 @@
 <?php
+  session_start();
   $book = $_POST['book'];
   $db = $_SESSION['db'];
   $books = "";
 
-  $statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
-  $statement->execute();
+//  $statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
+//  $statement->execute();
 
   // Go through each result
 //  while ($row = $statement->fetch(PDO::FETCH_ASSOC))
