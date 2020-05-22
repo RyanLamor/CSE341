@@ -22,7 +22,7 @@
 	<div class="nav_menu">
 		<a id="currentPage" href="#">Home</a>
 		<a href="assignments.html">Assignments</a>
-    <a href="../Group02/index.php">Group 2 Work</a>
+    <a href="https://group02.herokuapp.com/">Group 2 Work</a>
 	</div>
 
   <!--Main Body-->
