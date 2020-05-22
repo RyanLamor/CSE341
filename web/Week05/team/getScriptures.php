@@ -14,4 +14,5 @@ foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $
 
     $books .= "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p><br>";
   }
+  echo $books;
  ?>
