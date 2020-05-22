@@ -15,9 +15,11 @@
   foreach ($rows as $row)
     {
       $name = $row['name'];
-      $scores = $row['singleplayerhighscores'];
+      $score = $row['singleplayerhighscores'];
+      $time = $row['time'];
+      $date = $row['datecreated'];
 
-      echo "<p>" . $name . " " . $scores . "</p><br>";
+      echo "<p>" . $name . " " . $score . " ". $time . " " . $date . "</p><br>";
     }
 
  ?>
