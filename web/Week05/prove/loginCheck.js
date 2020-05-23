@@ -9,6 +9,7 @@ function checkLogin() {
     password: password
   },
   function(response){
+    console.log(response);
   });
 });
 }
