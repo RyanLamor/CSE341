@@ -1,6 +1,6 @@
 function checkLogin() {
-  var username = $('#userName').value;
-  var password = $('#userPass').value;
+  var username = $('#userName').val();
+  var password = $('#userPass').val();
 
   $(document).ready(function(){
   $.post("getScriptures.php",
