@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="loginCheck.js"></script>
 </head>
 <body>
   <div>
@@ -19,11 +20,11 @@
   </div>
 
   <div>
-    <form action="loginCheck.php" method="post">
-      <input type="text" name="username" placeholder="Username">
-      <input type="text" name="password" placeholder="Password">
-      <input type="submit" name= "btn"Value="Login">
-      <input type="submit" name="btn" Value="Create User">
+    <form onsubmit="checkLogin()">
+      <input id="userName" type="text" name="username" placeholder="Username">
+      <input id="userPass" type="text" name="password" placeholder="Password">
+      <input type="submit" name= "btn" Value="Login">
+      <a href="newUser.html" class="btn btn-primary">Create User</a>
     </form>
   </div>
 

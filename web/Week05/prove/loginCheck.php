@@ -4,12 +4,8 @@
   $db = get_db();
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $button = $_POST['btn'];
   $_SESSION['loginAttempts'] = 1;
 
-  if ($button == 'Create User'){
-    //redirect to new User Page
-  }
 
   $stmt = $db->prepare('SELECT user_id, username, password FROM users WHERE username=:username AND password=:password');
   $stmt->bindValue(':username', $username, PDO::PARAM_STR);
