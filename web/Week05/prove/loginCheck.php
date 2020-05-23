@@ -20,7 +20,7 @@
   else {
     $_SESSION['loginAttempts'] += 1;
     if ($_SESSION['loginAttempts'] < 3){
-      alert('Username/Password combination not found');
+      echo "alert('Username/Password combination not found');"
     }
     else{
       echo "<script>

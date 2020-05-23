@@ -3,7 +3,7 @@ function checkLogin() {
   var password = $('#userPass').val();
 
   $(document).ready(function(){
-  $.post("getScriptures.php",
+  $.post("loginCheck.php",
   {
     username: username,
     password: password
