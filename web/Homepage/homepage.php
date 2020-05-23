@@ -23,7 +23,7 @@
 		<a id="currentPage" href="#">Home</a>
 		<a href="assignments.html">Assignments</a>
     <a href="https://group02.herokuapp.com/">Group 2 Work</a>
-    <a href="../Week05/prove/main.html">Project</a>
+    <a href="../Week05/prove/login.html">Project</a>
 	</div>
 
   <!--Main Body-->

@@ -15,9 +15,17 @@
 <body>
   <div>
     <header>
-      <h1>UserName</h1>
-      <h1>Friends</h1>
+      <h1>Login</h1>
     </header>
+  </div>
+
+  <div>
+    <form action="loginCheck.php" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="text" name="password" placeholder="Password">
+      <input type="submit" name= "btn"Value="Login">
+      <input type="submit" name="btn" Value="Create User">
+    </form>
   </div>
 
 </body>
