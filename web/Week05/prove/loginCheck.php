@@ -29,7 +29,7 @@
     else{
       echo "<script>
       alert('Please Create a New User');
-      window.location.href='newUser.php';
+      window.location.href='newUser.html';
       </script>";
     }
   }
