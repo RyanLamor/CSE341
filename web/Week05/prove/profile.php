@@ -16,7 +16,7 @@
     AND u.user_id = :user_id
     AND gh.map_id = m.map_id
     ORDER BY gh.datecreated');
-  $stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+  $stmt->bindValue(':user_id', $_SESSION['userID'], PDO::PARAM_INT);
   $stmt->execute();
   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
