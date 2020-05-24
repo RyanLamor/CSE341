@@ -20,7 +20,7 @@
   </div>
 
   <div>
-    <form onsubmit="checkLogin()">
+    <form onsubmit="return checkLogin()" action="main.html" method="post">
       <input id="userName" type="text" name="username" placeholder="Username">
       <input id="userPass" type="text" name="password" placeholder="Password">
       <input type="submit" name= "btn" Value="Login">

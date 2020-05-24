@@ -15,7 +15,7 @@
 
   if ( isset($rows[0]['user_id']) ){
     $_SESSION['userID'] = $rows[0]['user_id'];
-    Header('Location: main.html');
+    echo 'true';
   }
   else {
     $_SESSION['loginAttempts'] += 1;
