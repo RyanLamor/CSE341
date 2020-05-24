@@ -4,7 +4,8 @@
   $db = get_db();
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $_SESSION['loginAttempts'] = 1;
+  if ( !isset($_SESSION['loginAttempts']) )
+    $_SESSION['loginAttempts'] = 1;
 
 
   $stmt = $db->prepare('SELECT user_id, username, password FROM users WHERE username=:username AND password=:password');
@@ -15,8 +16,8 @@
 
   if ( isset($rows[0]['user_id']) ){
     $_SESSION['userID'] = $rows[0]['user_id'];
-    echo 'true';
-  }
+    echo true;
+  } /*
   else {
     $_SESSION['loginAttempts'] += 1;
     if ($_SESSION['loginAttempts'] < 3){
@@ -29,5 +30,5 @@
       </script>";
     }
   }
-  
+  */
 ?>
