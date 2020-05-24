@@ -11,7 +11,7 @@ function checkLogin() {
     },
     function(response){
       console.log(response);
-      if (response == true){
+      if (response == 'true'){
         valid = true;
       }
     });
