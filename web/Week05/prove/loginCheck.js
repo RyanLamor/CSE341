@@ -4,7 +4,7 @@ function checkLogin() {
   var valid = false;
 
   $(document).ready(function(){
-    $.post("mapHighScores.php",
+    $.post("loginCheck.php",
     {
       username: username,
       password: password
