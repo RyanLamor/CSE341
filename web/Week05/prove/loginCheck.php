@@ -16,7 +16,7 @@
 
   if ( isset($rows[0]['user_id']) ){
     $_SESSION['userID'] = $rows[0]['user_id'];
-    echo true;
+    echo 'true';
   } /*
   else {
     $_SESSION['loginAttempts'] += 1;
