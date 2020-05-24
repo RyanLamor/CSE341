@@ -4,18 +4,18 @@ function checkLogin() {
   var valid = false;
 
   $(document).ready(function(){
-  $.post("loginCheck.php",
-  {
-    username: username,
-    password: password
-  },
-  function(response){
-    console.log(response);
-    if (response == true){
-      valid = true;0
-    }
+    $.post("loginCheck.php",
+    {
+      username: username,
+      password: password
+    },
+    function(response){
+      console.log(response);
+      if (response == true){
+        valid = true;
+      }
+    });
   });
-});
 
   return valid;
 }
