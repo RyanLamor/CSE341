@@ -11,7 +11,9 @@ function checkLogin() {
     function(response){
       console.log(response);
       if (response == 'true' ){
-        window.location.href = "main.php";
+        var form = $('<form action="main.php" method="post"></form>');
+        $('body').append(form);
+        form.submit();
       }
     });
   });
