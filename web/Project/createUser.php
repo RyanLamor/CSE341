@@ -11,13 +11,21 @@
   $stmt->bindValue(':username', $username, PDO::PARAM_STR);
   $stmt->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
   $stmt->bindValue(':password', $password, PDO::PARAM_STR);
-  $stmt->execute();
+  $success = $stmt->execute();
 
   $newId = $pdo->lastInsertId('user_id_seq');
   $_SESSION['userID'] = $newId;
 
-  echo "<script>
-  alert('New User Created');
-  window.location.href='main.php';
-  </script>";
+  if ($success){
+    echo "<script>
+    alert('New User Created');
+    window.location.href='main.php';
+    </script>";
+  }
+  else {
+    echo "<script>
+    alert('Username and/or Screen name already exists');
+    window.location.href='newUser.php';
+    </script>";
+  }
 ?>
