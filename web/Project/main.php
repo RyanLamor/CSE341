@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
   <title>Main Screen</title>
-  <?php include('head.php');?>
+  <?php include 'head.php';?>
 </head>
 <body>
   <div>
