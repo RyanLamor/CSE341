@@ -18,7 +18,7 @@
     <form action="menuChoice.php" method="post">
       <button type="submit" value="play.html" name="btn">Play</button><br>
       <button type="submit" value="highScores.html" name="btn">High Scores</button><br>
-      <button type="submit" value="profile." name="btn">Profile</button><br>
+      <button type="submit" value="profile.php" name="btn">Profile</button><br>
       <button type="submit" value="info.html" name="btn">Game Info</button><br>
     </form>
   </div>
