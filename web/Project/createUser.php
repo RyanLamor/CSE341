@@ -15,21 +15,13 @@
     $success = $stmt->execute();
 
     $_SESSION['userID'] = $pdo->lastInsertId('user_id_seq');
-    /*
+
     if ($success){
       echo "<script>
       alert('New User Created');
       window.location.href='main.php';
       </script>";
-    }
-    else {
-      echo "<script>
-      console.log($success->errCode());
-      alert('Username and/or Screen name already exists');
-      window.location.href='newUser.php';
-      </script>";
-    }
-    */
+    }  
   }
   catch (Exception $ex){
     echo "Error with DB. Details: $ex";
