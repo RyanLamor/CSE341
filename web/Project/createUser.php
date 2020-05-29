@@ -6,7 +6,7 @@
   $username = $_POST['username'];
   $screen_name = $_POST['screen_name'];
   $password = $_POST['password'];
-
+/*
   $stmt = $db->prepare('INSERT INTO user (username, screen_name, password) VALUES (:username, :screen_name, :password) ');
   $stmt->bindValue(':username', $username, PDO::PARAM_STR);
   $stmt->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
@@ -28,4 +28,5 @@
     window.location.href='newUser.php';
     </script>";
   }
+  */
 ?>
