@@ -15,6 +15,9 @@ function checkLogin() {
         $('body').append(form);
         form.submit();
       }
+      else{
+        alert("No user found with username/password combination!");
+      }
     });
   });
 

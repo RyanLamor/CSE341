@@ -13,11 +13,11 @@
   </div>
 
   <div>
-    <form onsubmit="return checkLogin()" action="main.php" method="post">
-      <input id="userName" type="text" name="username" placeholder="Username">
+    <form action="createUser.php" method="post">
+      <input id="userName" type="text" name="username" placeholder="Username"><br>
+      <input id="screenName" type="text" name="screen_name" placeholder="Screen Name"><br>
       <input id="userPass" type="text" name="password" placeholder="Password">
-      <button type="submit" class="btn btn-primary" name= "btn">Login</button>
-      <a href="newUser.php" class="btn btn-primary">Create User</a>
+      <button type="submit" class="btn btn-primary" name= "btn">Creater Usern</button>
     </form>
   </div>
 

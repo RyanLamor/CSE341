@@ -1,4 +1,5 @@
 <?php
+  session_cache_limiter('private_no_expire'); // works
   session_start();
   ?>
 <!DOCTYPE html>
