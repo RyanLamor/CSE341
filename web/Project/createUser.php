@@ -7,7 +7,7 @@
   $screen_name = $_POST['screen_name'];
   $password = $_POST['password'];
 
-  $stmt = $db->prepare('INSERT INTO user (username, screen_name, password) VALUES (:username, :screen_name, :password) ');
+  $stmt = $db->prepare('INSERT INTO users (username, screen_name, password) VALUES (:username, :screen_name, :password) ');
   $stmt->bindValue(':username', $username, PDO::PARAM_STR);
   $stmt->bindValue(':screen_name', $screen_name, PDO::PARAM_STR);
   $stmt->bindValue(':password', $password, PDO::PARAM_STR);
@@ -22,6 +22,7 @@
     </script>";
   }
   else {
+    //$success->errorcode();
     echo "<script>
     alert('Username and/or Screen name already exists');
     window.location.href='newUser.php';
@@ -29,3 +30,11 @@
   }
   */
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <?php
+    include 'head.php';
+   ?>
+</head>
+</html>
