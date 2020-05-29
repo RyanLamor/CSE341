@@ -18,15 +18,15 @@
     $_SESSION['newUserCreated'] = true;
     $_SESSION['username'] = $username;
 
-    Header('Location: main.php')
-    die();
-
   }
   catch (Exception $ex){
     echo "Error with DB. Details: $ex";
     die();
   }
 
+  Header('Location: main.php')
+  die();
+  
 ?>
 <!DOCTYPE html>
 <html>
