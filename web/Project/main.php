@@ -5,7 +5,6 @@
 <html lang="en">
 <head>
   <title>Main Screen</title>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -26,7 +25,7 @@
     <form action="menuChoice.php" method="post">
       <button type="submit" value="play.html" name="btn">Play</button><br>
       <button type="submit" value="highScores.html" name="btn">High Scores</button><br>
-      <button type="submit" value="profile.html" name="btn">Profile</button><br>
+      <button type="submit" value="profile.php" name="btn">Profile</button><br>
       <button type="submit" value="info.html" name="btn">Game Info</button><br>
     </form>
   </div>
