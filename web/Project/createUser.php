@@ -18,7 +18,8 @@
     $_SESSION['newUserCreated'] = true;
     $_SESSION['username'] = $username;
 
-    window.location.href='main.php';
+    Header('Location: main.php')
+    die();
 
   }
   catch (Exception $ex){
