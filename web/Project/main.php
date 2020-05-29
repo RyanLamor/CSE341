@@ -1,6 +1,11 @@
 <?php
   session_cache_limiter('private_no_expire'); // works
   session_start();
+
+  if (isset($_SESSION['newUserCreated'])){
+    $username = $_SESSION['username'];
+    echo "<script>alert('Welcome $username \n thank you for creating an account!')"
+  }
   ?>
 <!DOCTYPE html>
 <html lang="en">
