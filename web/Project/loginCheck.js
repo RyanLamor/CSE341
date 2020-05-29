@@ -1,7 +1,6 @@
 function checkLogin() {
   var username = $('#userName').val();
   var password = $('#userPass').val();
-  var valid = false;
 
   $(document).ready(function(){
     $.post("loginCheck.php",
@@ -12,10 +11,10 @@ function checkLogin() {
     function(response){
       console.log(response);
       if (response == 'true' ){
-        valid = true;
+        window.location.href = "main.php";
       }
     });
   });
 
-  return valid;
+  return false;
 }
