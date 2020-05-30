@@ -33,8 +33,9 @@
   <div>
     <header>
       <?php
+        echo "<h1>" . $username . "</h1>";
         echo "<h1>" . $screen_name . "</h1>";
-        echo "<h1>Recent Games Played</h2>";
+        echo "<h2>Recent Games Played</h2>";
         echo "Map Name \tScore \tTime \tDate";
         foreach ($rows as $row){
           echo "<p>" . $row['name'] . " " . $row['score'] . " " . $row['time'] . " " . $row['datecreated'] . "</p>";

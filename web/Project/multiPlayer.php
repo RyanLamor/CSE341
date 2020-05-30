@@ -25,14 +25,14 @@
   $opp_score = $opp_baseScore + $opp_bonusScore;
 
   //get random opponent
-  $results = $db->query('SELECT user_id FROM users');
-  $num_rows = mysql_num_rows($results);
+  $users = $db->query('SELECT user_id FROM users');
+  $num_rows = $db->query('SELECT count(1) FROM users');//get number of users
   $index = rand(0, $num_rows);
 
-  $opponent_id = $results[$index];
+  $opponent_id = $users[$index];
 
   if ($opponent_id == $userID){
-    $opponent_id = $results[$index - 1];
+    $opponent_id = $users[$index - 1];
   }
 
   //update database
@@ -70,6 +70,10 @@
     $opp_screen_name = $rows[0]['screen_name'];
 
   }
+  catch (Exception $ex){
+      echo "Error with DB. Details: $ex";
+      die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
