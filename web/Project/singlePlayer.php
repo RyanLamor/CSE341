@@ -24,7 +24,7 @@
       :user_id,
       :score,
       :time,
-      0,
+      false,
       :date);');
     $stmt->bindValue(':map_id', $map_id);
     $stmt->bindValue(':user_id', $userID);
@@ -37,7 +37,7 @@
       echo "Error with DB. Details: $ex";
       die();
     }
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
