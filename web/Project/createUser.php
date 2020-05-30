@@ -6,7 +6,7 @@
   $username = $_POST['username'];
   $screen_name = $_POST['screen_name'];
   $password = $_POST['password'];
-
+/*
   try{
     $stmt = $db->prepare('INSERT INTO users (username, screen_name, password) VALUES (:username, :screen_name, :password) ');
     $stmt->bindValue(':username', $username);
@@ -23,8 +23,7 @@
     echo "Error with DB. Details: $ex";
     die();
   }
-
-  Header('Location: main.php');
-  die();
+*/
+  header('Location:main.php');
 
 ?>
