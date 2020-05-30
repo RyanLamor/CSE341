@@ -4,6 +4,8 @@
   $db = get_db();
   $username = $_POST['username'];
   $password = $_POST['password'];
+  $_SESSION['username'] = $username;
+  
   if ( !isset($_SESSION['loginAttempts']) )
     $_SESSION['loginAttempts'] = 1;
 
