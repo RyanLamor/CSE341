@@ -4,7 +4,7 @@
 
   if (isset($_SESSION['newUserCreated'])){
     $username = $_SESSION['username'];
-    echo "<script>alert('Welcome $username \n thank you for creating an account!')"
+    echo "<script>alert('Welcome $username \n thank you for creating an account!')";
   }
   ?>
 <!DOCTYPE html>
