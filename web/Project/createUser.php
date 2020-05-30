@@ -24,15 +24,7 @@
     die();
   }
 
-  Header('Location: main.php')
+  Header('Location: main.php');
   die();
-  
+
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <?php
-    include 'head.php';
-   ?>
-</head>
-</html>
