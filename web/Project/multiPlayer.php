@@ -25,7 +25,7 @@
   $opp_score = $opp_baseScore + $opp_bonusScore;
 
   //get random opponent
-  $users = $db->query('SELECT user_id FROM users');
+  $users = $db->query('SELECT user_id FROM users');//get list of all user id's
   $num_rows = $db->query('SELECT count(1) FROM users');//get number of users
   $index = rand(0, $num_rows);
 
