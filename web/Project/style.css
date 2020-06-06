@@ -57,5 +57,8 @@ header{
     border-radius: 1rem;
 }
 .go_back{
-  margin:25px;
+    margin:25px;
+}
+.highScoreTable{
+    background-color: white;
 }
