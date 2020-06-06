@@ -29,15 +29,15 @@
   $num_rows = $db->query('SELECT count(1) FROM users');//get number of users
   $index = rand(0, $num_rows);
 
-  $opponent_id = $users[$index]['user_id'];
+  //$opponent_id = $users[$index]['user_id'];
 
-  if ($opponent_id == $userID){
-    $opponent_id = $users[$index - 1]['user_id'];
-  }
+  //if ($opponent_id == $userID){
+  //  $opponent_id = $users[$index - 1]['user_id'];
+  //}
 
   var_dump($users);
   print_r($num_rows);
-  print_r($opponent_id);
+  //print_r($opponent_id);
   //update database
   /*try{
     $stmt = $db->prepare('INSERT INTO multiplayergamehistory (map_id, player1, player2, score, time, isHighScore, dateCreated)
