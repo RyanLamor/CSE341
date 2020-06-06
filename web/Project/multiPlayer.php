@@ -35,7 +35,9 @@
     $opponent_id = $users[$index - 1]['user_id'];
   }
 
-  echo $opponent_id;
+  var_dump($users);
+  print_r($num_rows);
+  print_r($opponent_id);
   //update database
   /*try{
     $stmt = $db->prepare('INSERT INTO multiplayergamehistory (map_id, player1, player2, score, time, isHighScore, dateCreated)
@@ -86,6 +88,7 @@
 <body>
   <div>
     <?php
+    /*
       echo '<h2>' . $screen_name . '\'s Game </h2>';
       echo '<h3>' . 'Score: ' . $score . ' Time: ' . $time . '</h3><br>';
 
@@ -97,7 +100,7 @@
       }
       else{
         echo '<h2 style="color:red">You LOST!</h2><br>';
-      }
+      }*/
      ?>
   </div>
 
