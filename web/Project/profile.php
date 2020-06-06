@@ -20,7 +20,8 @@
     AND gh.map_id = m.map_id
     ORDER BY gh.datecreated');
   $stmt->bindValue(':user_id', $userID, PDO::PARAM_INT);
-  $singlePlayerGames = $stmt->execute();
+  $stmt->execute();
+  $singlePlayerGames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
   $stmt = $db->prepare('SELECT m.name, gh.score, gh.time, gh.datecreated FROM maps m, users u, multiplayergamehistory gh
@@ -29,7 +30,8 @@
     AND gh.map_id = m.map_id
     ORDER BY gh.datecreated');
   $stmt->bindValue(':user_id', $userID, PDO::PARAM_INT);
-  $multiPlayerGames = $stmt->execute();
+  $stmt->execute();
+  $multiPlayerGames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -58,7 +60,7 @@
       echo "<table class='highScoreTable' border='1'>";
       echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
       $count = 0;
-      while ($row = $singlePlayerGames->fetch(PDO::FETCH_ASSOC)){
+      foreach ($singlePlayerGames as $row){
           if ($count >= 10){
             break;
           }
@@ -79,7 +81,7 @@
         echo "<table class='highScoreTable' border='1'>";
         echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
         $count = 0;
-        while ($row = $multiPlayerGames->fetch(PDO::FETCH_ASSOC)){
+        foreach ($multiPlayerGames as $row){
           if ($count >= 10){
             break;
           }
@@ -91,7 +93,6 @@
           $count++;
         }
         echo "</table>";
-        
         //update multiPlayer games to show who user played and against and who won/lost
         //add ability to click on a recent opponent to see their profile and and as friend
 
