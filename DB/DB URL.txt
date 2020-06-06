@@ -1,5 +1,0 @@
-Group 02
-pgweb --url=postgres://zvyaaqwwedlmur:3d98e425f9532ac59bf8cfe5b15b83e2161ee22a4c2d7657fd2a2801ca76390f@ec2-34-195-169-25.compute-1.amazonaws.com:5432/d1nb6ksk1037dk
-
-MINE
-pgweb --url=postgres://vvwuzucoospzbv:a159e8cc9f508cecc1bd9a710812ad6a1682382d989b68563df16d4506da75ba@ec2-34-224-229-81.compute-1.amazonaws.com:5432/dcfb0vi4ahmsnc
