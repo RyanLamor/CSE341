@@ -12,6 +12,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="updateHighScores.js"></script>
 
+  <style>
+      .main{
+          width: 90%;
+      }
+  </style>
 </head>
 <body onload="updateHighScores()">
   <div>
@@ -20,7 +25,7 @@
     </header>
   </div>
 
-  <div>
+  <div class="main">
     <form action="mapHighScores.php" method="post">
       <button type="submit" name="map_id" value="1"> <img src="Map1.jpg" /> </button>
       <button type="submit" name="map_id" value="2"> <img src="Map2.jpg" /> </button>

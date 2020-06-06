@@ -9,13 +9,13 @@
   AND gh.map_id = m.map_id
   AND gh.player = u.user_id
   AND m.map_id=:map_id
-  ORDER BY gh.score');
+  ORDER BY gh.score DESC');
   $stmt->bindValue(':map_id', $Map_id, PDO::PARAM_INT);
   $stmt->execute();
   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   echo "<table class='highScoreTable' border='1'>";
-  echo "<h2>Single Player Games</h2>";
+  echo "<header><h2>Single Player Games</h2></header>";
   echo "<tr><th>Map Name</th><th>Score</th><th>Player</th><th>Time</th><th>Date</th>";
   foreach ($rows as $row){
     echo "<tr>";
@@ -28,6 +28,12 @@
 
   echo '<a href="highScores.html" class="btn btn-light">Go Back</a>';
 
-    //update to display multiplayer games as well
+  //update to display multiplayer games as well
+  $db->prepare('SELECT multiplayerhighscores FROM maps WHERE map_id=:map_id');
+  $stmt->bindValue(':map_id', $Map_id);
+  $stmt->execute();
 
+  $games = $stmt->fetch();
+
+  var_dump($games);
  ?>
