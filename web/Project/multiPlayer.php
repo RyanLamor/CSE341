@@ -91,6 +91,7 @@
 <head>
   <title>Muli-Player Game</title>
   <?php include 'head.php';?>
+    <script src="updateHighScores.js"></script>
 </head>
 <body>
   <div class="main">
