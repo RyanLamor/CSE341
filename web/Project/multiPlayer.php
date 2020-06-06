@@ -25,19 +25,21 @@
   $opp_score = $opp_baseScore + $opp_bonusScore;
 
   //get random opponent
-  $users = $db->query('SELECT user_id FROM users');//get list of all user id's
   $num_rows = $db->query('SELECT count(1) FROM users');//get number of users
+  $num_rows = $num_rows->fetchColumn();
   $index = rand(0, $num_rows);
 
-  //$opponent_id = $users[$index]['user_id'];
+  $users_query = $db->query('SELECT user_id FROM users');//get list of all user id's
+  $users = $users_query->fetchAll(PDO::FETCH_ASSOC);
 
-  //if ($opponent_id == $userID){
-  //  $opponent_id = $users[$index - 1]['user_id'];
-  //}
+  $opponent_id = $users[$index]['user_id'];
 
-  var_dump($users);
+  if ($opponent_id == $userID){
+    $opponent_id = $users[$index - 1]['user_id'];
+  }
+
   print_r($num_rows);
-  //print_r($opponent_id);
+  print_r($opponent_id);
   //update database
   /*try{
     $stmt = $db->prepare('INSERT INTO multiplayergamehistory (map_id, player1, player2, score, time, isHighScore, dateCreated)
