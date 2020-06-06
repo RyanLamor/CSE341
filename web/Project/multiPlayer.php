@@ -29,14 +29,14 @@
   $num_rows = $db->query('SELECT count(1) FROM users');//get number of users
   $index = rand(0, $num_rows);
 
-  $opponent_id = $users[$index];
+  $opponent_id = $users[$index]['user_id'];
 
   if ($opponent_id == $userID){
-    $opponent_id = $users[$index - 1];
+    $opponent_id = $users[$index - 1]['user_id'];
   }
 
   //update database
-  try{
+  /*try{
     $stmt = $db->prepare('INSERT INTO multiplayergamehistory (map_id, player1, player2, score, time, isHighScore, dateCreated)
     VALUES(
       :map_id,
@@ -60,7 +60,7 @@
     }
 
   //get opponent info
-  /*
+  */
   try{
     $stmt = $db->prepare('SELECT screen_name FROM users WHERE user_id=:opponent_id');
     $stmt->bindValue(':opponent_id', $opponent_id);
@@ -74,7 +74,7 @@
   catch (Exception $ex){
       echo "Error with DB. Details: $ex";
       die();
-    }*/
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +85,6 @@
 <body>
   <div>
     <?php
-    /*
       echo '<h2>' . $screen_name . '\'s Game </h2>';
       echo '<h3>' . 'Score: ' . $score . ' Time: ' . $time . '</h3><br>';
 
@@ -97,7 +96,7 @@
       }
       else{
         echo '<h2 style="color:red">You LOST!</h2><br>';
-      }*/
+      }
      ?>
   </div>
 
