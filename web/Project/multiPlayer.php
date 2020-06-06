@@ -34,8 +34,11 @@
 
   $opponent_id = $users[$index]['user_id'];
 
-  if ($opponent_id == $userID){
+  if ($opponent_id == $userID && $userID > 2){
     $opponent_id = $users[$index - 1]['user_id'];
+  }
+  else {
+    $opponent_id = $users[$index + 1]['user_id'];
   }
 
   //update database
@@ -56,6 +59,10 @@
     $stmt->bindValue(':time', $time);
     $stmt->bindValue(':date', date("Y/m/d"));
     $stmt->execute();
+
+    echo '<script type="text/javascript">',
+     'updateHighScores();',
+     '</script>';
   }
   catch (Exception $ex){
       echo "Error with DB. Details: $ex";

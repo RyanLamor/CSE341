@@ -33,6 +33,10 @@
     $stmt->bindValue(':time', $time);
     $stmt->bindValue(':date', date("Y/m/d"));
     $stmt->execute();
+
+    echo '<script type="text/javascript">',
+     'updateHighScores();',
+     '</script>';
   }
   catch (Exception $ex){
       echo "Error with DB. Details: $ex";
