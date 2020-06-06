@@ -55,4 +55,5 @@
         die();
       }
 
+    echo 'test';
  ?>

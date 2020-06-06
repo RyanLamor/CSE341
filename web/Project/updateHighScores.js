@@ -1,5 +1,4 @@
 function updateHighScores() {
-  $(document).ready(function(){
     $.ajax({
         url: 'updateHighScores.php',
         error: function(xhr, statusText, err) {
@@ -10,7 +9,6 @@ function updateHighScores() {
         },
         type: 'POST'
     });
-  });
 
   return false;
 }
