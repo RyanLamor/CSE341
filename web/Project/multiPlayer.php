@@ -93,7 +93,7 @@
       echo '<h3>' . 'Score: ' . $score . ' Time: ' . $time . '</h3><br>';
 
       echo '<h2>' . $opp_screen_name . '\'s Game </h2>';
-      echo '<h3>' . 'Score: ' . $oop_score . ' Time: ' . $opp_time . '</h3><br>';
+      echo '<h3>' . 'Score: ' . $opp_score . ' Time: ' . $opp_time . '</h3><br>';
 
       if ($score > $opp_score){
         echo '<h2 style="color:green">You WON!</h2>';
