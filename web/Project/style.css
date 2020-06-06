@@ -14,6 +14,11 @@ body {
     width: 40%;
     text-align: center;
 }
+.center{
+    margin:15px auto;
+    width: 60%;
+    text-align: center;
+}
 .loginForm{
     padding: 25px;
 }

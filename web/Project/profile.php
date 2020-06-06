@@ -21,7 +21,16 @@
     ORDER BY gh.datecreated');
   $stmt->bindValue(':user_id', $userID, PDO::PARAM_INT);
   $stmt->execute();
-  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $singlePlayerGames = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $stmt = $db->prepare('SELECT m.name, gh.score, gh.time, gh.datecreated FROM maps m, users u, multiplayergamehistory gh
+    WHERE gh.player = u.user_id
+    AND u.user_id = :user_id
+    AND gh.map_id = m.map_id
+    ORDER BY gh.datecreated');
+  $stmt->bindValue(':user_id', $userID, PDO::PARAM_INT);
+  $stmt->execute();
+  $multiPlayerGames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,23 +52,38 @@
     </header>
   </div>
 
-  <div class="main">
+  <div class="center">
+    <h4>Single Player Games</h4>
     <?php
       echo "<table class='highScoreTable' border='1'>";
       echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
-      foreach ($rows as $row){
+      foreach ($singlePlayerGames as $row){
         echo "<tr>";
-          foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-              echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function.
+          foreach ($row as $field => $value) {
+              echo "<td>" . $value . "</td>";
           }
         echo "</tr>";
       }
       echo "</table>";
-
-
-      //update to display multiplayer Games
-      //update to show list of friends
     ?>
+
+    <br>
+    <h4>Multi-Player Games</h4>
+
+    <?php
+        echo "<table class='highScoreTable' border='1'>";
+        echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
+        foreach ($multiPlayerGames as $row){
+          echo "<tr>";
+            foreach ($row as $field => $value) {
+                echo "<td>" . $value . "</td>";
+            }
+          echo "</tr>";
+        }
+
+
+        //update to show list of friends
+      ?>
   </div>
 
 </body>
