@@ -55,14 +55,11 @@
 
 </head>
 <body>
-  <div>
+  <div class="main">
     <?php
       echo '<h2>' . $screen_name . '\'s Game </h2>';
-      echo '<h3>' . 'Score: ' . $score . ' Time: ' . $time . '</h3>';
+      echo '<h3>' . 'Score: ' . $score . ' Time: ' . $time . '</h3><br>';
      ?>
-  </div>
-
-  <div>
     <form action="selectMap.php" method="post">
       <button type="submit" class="btn btn-light" name= "play" value="singlePlayer">Play Again</button>
       <a href="main.php" class="btn btn-light">Return to Menu</a>

@@ -14,17 +14,27 @@
   <style>
       button{
         margin:15px 0px;
+        color:gold;
+        background-color: black;
+        border:none;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      button:hover{
+        border: solid;
+        border-color: gold;
+        background-color: rgb(61, 61, 61);
       }
       .main{
         width: 70%;
       }
-  </style>
+  </style>S
 </head>
 <body>
   <div class="main">
     <form action="selectMap.php" method="post">
-      <button class="btn btn-secondary" type="submit" name="play" value="singlePlayer">Play simulated game : SinglePlayer</button>
-      <button class="btn btn-secondary" type="submit" name="play" value="multiPlayer">Play simulated game : Multi-Player</button>
+      <button type="submit" name="play" value="singlePlayer">Play simulated game : SinglePlayer</button>
+      <button type="submit" name="play" value="multiPlayer">Play simulated game : Multi-Player</button>
     </form>
   </div>
 
