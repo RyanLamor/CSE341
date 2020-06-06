@@ -28,8 +28,8 @@
 
   echo '<a href="highScores.html" class="btn btn-light">Go Back</a>';
 
-  //update to display multiplayer games as well
-  $db->prepare('SELECT multiplayerhighscores FROM maps WHERE map_id=:map_id');
+  //get array of multiplayer highscores for current map
+  $stmt = $db->prepare('SELECT multiplayerhighscores FROM maps WHERE map_id=:map_id');
   $stmt->bindValue(':map_id', $Map_id);
   $stmt->execute();
 
