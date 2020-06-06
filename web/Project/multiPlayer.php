@@ -13,7 +13,7 @@
   $time = date("i:s", $seconds);
 
   $opp_seconds = rand(60, 600);
-  $opp_time = date("i:s", $seconds);
+  $opp_time = date("i:s", $opp_seconds);
 
   //generate random scores
   $baseScore = (600-$seconds) * 100;

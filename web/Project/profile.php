@@ -5,12 +5,12 @@
 
   $userID =  $_SESSION['userID'];
 
-  $stmt = $db->prepare('SELECT username, screen_name, friendlist FROM users WHERE user_id=:user_id');
+  $stmt = $db->prepare('SELECT screen_name, friendlist FROM users WHERE user_id=:user_id');
   $stmt->bindValue(':user_id', $userID, PDO::PARAM_STR);
   $stmt->execute();
   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $username = $rows[0]['username'];
+  $username = $_SESSION['username'];
   $screen_name = $rows[0]['screen_name'];
   $friends = $rows[0]['friendlist'];
 
@@ -30,16 +30,31 @@
   <?php include 'head.php';?>
 </head>
 <body>
+  <div class="go_back">
+      <a href="main.php" class="btn btn-light">Return to Menu</a>
+  </div>
+
   <div>
     <header>
       <?php
-        echo "<h1>" . $username . "</h1>";
         echo "<h1>" . $screen_name . "</h1>";
         echo "<h2>Recent Games Played</h2>";
         echo "Map Name \tScore \tTime \tDate";
+        echo "<table border='1'>";
         foreach ($rows as $row){
-          echo "<p>" . $row['name'] . " " . $row['score'] . " " . $row['time'] . " " . $row['datecreated'] . "</p>";
+          echo "<tr>";
+            foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+                echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function.
+            }
+          echo "</tr>";
         }
+        echo "</table>";
+
+          //echo "<p>" . $row['name'] . " " . $row['score'] . " " . $row['time'] . " " . $row['datecreated'] . "</p>";
+        //}
+
+        //update to display multiplayer Games
+        //update to show list of friends
       ?>
     </header>
   </div>

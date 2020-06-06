@@ -24,6 +24,7 @@
       echo "<p>" . $name . " " . $score . " ". $user . " " . $time . " " . $date . "</p><br>";
     }
 
+    echo '<a href="highScores.html" class="btn btn-light">Go Back</a>';
     //update to display multiplayer games as well
     //SELECT mulitplayerHighScores from map WHERE map_id=:map_id
     //for each index in returned array => SELECT m.name, gh.score, u.screen_name, u2.screen_name, gh.time, gh.datecreated FROM singleplayergamehistory gh, maps m, users u, users u2
