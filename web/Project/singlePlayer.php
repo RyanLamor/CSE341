@@ -34,7 +34,8 @@
     $stmt->bindValue(':date', date("Y/m/d"));
     $stmt->execute();
 
-    echo '<script type="text/javascript">',
+    echo '<script src="updateHighScores.js"></script>';
+    echo '<script type="javascript">',
      'updateHighScores();',
      '</script>';
   }
@@ -49,8 +50,6 @@
 <head>
   <title>Single Player Game</title>
   <?php include 'head.php';?>
-  <script src="updateHighScores.js"></script>
-
 </head>
 <body>
   <div class="main">
