@@ -8,6 +8,12 @@
 <head>
   <title>Map Select</title>
   <?php include 'head.php';?>
+
+  <style>
+      .main{
+          width: 90%;
+      }
+  </style>
 </head>
 <body>
   <div>
@@ -16,7 +22,7 @@
     </header>
   </div>
 
-  <div>
+  <div class="main">
     <?php echo '<form action=' . $playType . '.php' . ' method="post">'; ?>
       <button type="submit" name="map_id" value="1"> <img src="Map1.jpg" /> </button>
       <button type="submit" name="map_id" value="2"> <img src="Map2.jpg" /> </button>

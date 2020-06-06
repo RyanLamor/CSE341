@@ -3,6 +3,7 @@
 <head>
   <title>Main Screen</title>
   <?php include 'head.php';?>
+
   <script src="loginCheck.js"></script>
 </head>
 <body>
@@ -12,10 +13,10 @@
     </header>
   </div>
 
-  <div>
-    <form onsubmit="return checkLogin()" action="main.php" method="post">
-      <input id="userName" type="text" name="username" placeholder="Username">
-      <input id="userPass" type="text" name="password" placeholder="Password">
+  <div class="shadow p-3 mb-5 bg-white rounded" id="main">
+    <form class="loginForm" onsubmit="return checkLogin()" action="main.php" method="post">
+      <input id="userName" type="text" name="username" placeholder="Username"><br>
+      <input id="userPass" type="password" name="password" placeholder="Password"><br>
       <button type="submit" class="btn btn-primary" name= "btn">Login</button>
       <a href="newUser.php" class="btn btn-primary">Create User</a>
     </form>

@@ -12,20 +12,21 @@
 <head>
   <title>Main Screen</title>
   <?php include 'head.php';?>
+
 </head>
 <body>
   <div>
     <header>
-      <h1>Rain Drop Racing</h1>
+      <h1 class="title">Rain Drop Racing</h1>
     </header>
   </div>
 
-  <div class='form'>
-    <form action="menuChoice.php" method="post">
-      <button type="submit" value="play.html" name="btn">Play</button><br>
-      <button type="submit" value="highScores.html" name="btn">High Scores</button><br>
-      <button type="submit" value="profile.php" name="btn">Profile</button><br>
-      <button type="submit" value="info.html" name="btn">Game Info</button><br>
+  <div class="main" style="margin-top:75px;">
+    <form class="menu" action="menuChoice.php" method="post">
+      <button class="btn btn-outline-warning" type="submit" value="play.html" name="btn">Play</button><br>
+      <button class="btn btn-outline-warning" type="submit" value="highScores.html" name="btn">High Scores</button><br>
+      <button class="btn btn-outline-warning" type="submit" value="profile.php" name="btn">Profile</button><br>
+      <button class="btn btn-outline-warning" type="submit" value="info.html" name="btn">Game Info</button><br>
     </form>
   </div>
 </body>
