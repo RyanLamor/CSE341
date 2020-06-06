@@ -35,6 +35,7 @@
     $opponent_id = $users[$index - 1]['user_id'];
   }
 
+  echo $opponent_id;
   //update database
   /*try{
     $stmt = $db->prepare('INSERT INTO multiplayergamehistory (map_id, player1, player2, score, time, isHighScore, dateCreated)
@@ -60,7 +61,7 @@
     }
 
   //get opponent info
-  */
+
   try{
     $stmt = $db->prepare('SELECT screen_name FROM users WHERE user_id=:opponent_id');
     $stmt->bindValue(':opponent_id', $opponent_id);
@@ -74,7 +75,7 @@
   catch (Exception $ex){
       echo "Error with DB. Details: $ex";
       die();
-    }
+    }*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
