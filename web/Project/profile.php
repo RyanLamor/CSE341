@@ -58,7 +58,7 @@
       echo "<table class='highScoreTable' border='1'>";
       echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
       $count = 0;
-      while ($count < 10)
+      while ($count < 10){
           $row = $singlePlayerGames->fetch(PDO::FETCH_ASSOC);
           echo "<tr>";
           foreach ($row as $field => $value) {
