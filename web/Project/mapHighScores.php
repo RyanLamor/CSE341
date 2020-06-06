@@ -1,5 +1,6 @@
 <?php
   require "dbConnect.php";
+  include "head.php";
   $db = get_db();
   $Map_id = $_POST['map_id'];
 
