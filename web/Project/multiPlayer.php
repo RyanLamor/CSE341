@@ -38,10 +38,8 @@
     $opponent_id = $users[$index - 1]['user_id'];
   }
 
-  print_r($num_rows);
-  print_r($opponent_id);
   //update database
-  /*try{
+  try{
     $stmt = $db->prepare('INSERT INTO multiplayergamehistory (map_id, player1, player2, score, time, isHighScore, dateCreated)
     VALUES(
       :map_id,
@@ -79,7 +77,7 @@
   catch (Exception $ex){
       echo "Error with DB. Details: $ex";
       die();
-    }*/
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,9 +86,9 @@
   <?php include 'head.php';?>
 </head>
 <body>
-  <div>
+  <div class="main">
     <?php
-    /*
+
       echo '<h2>' . $screen_name . '\'s Game </h2>';
       echo '<h3>' . 'Score: ' . $score . ' Time: ' . $time . '</h3><br>';
 
@@ -102,11 +100,8 @@
       }
       else{
         echo '<h2 style="color:red">You LOST!</h2><br>';
-      }*/
+      }
      ?>
-  </div>
-
-  <div>
     <form action="selectMap.php" method="post">
       <button type="submit" class="btn btn-light" name= "play" value="multiPlayer">Play Again</button>
       <a href="main.php" class="btn btn-light">Return to Menu</a>
