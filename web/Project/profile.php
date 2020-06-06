@@ -58,7 +58,10 @@
       echo "<table class='highScoreTable' border='1'>";
       echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
       $count = 0;
-      while ($row = $singlePlayerGames->fetch(PDO::FETCH_ASSOC) && $count < 10 ){
+      while ($row = $singlePlayerGames->fetch(PDO::FETCH_ASSOC)){
+          if ($count >= 10){
+            break;
+          }
           echo "<tr>";
           foreach ($row as $field => $value) {
               echo "<td>" . $value . "</td>";
@@ -76,7 +79,10 @@
         echo "<table class='highScoreTable' border='1'>";
         echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
         $count = 0;
-        while ($row = $multiPlayerGames->fetch(PDO::FETCH_ASSOC) && $count < 10){
+        while ($row = $multiPlayerGames->fetch(PDO::FETCH_ASSOC)){
+          if ($count >= 10){
+            break;
+          }
           echo "<tr>";
             foreach ($row as $field => $value) {
                 echo "<td>" . $value . "</td>";
@@ -84,7 +90,8 @@
           echo "</tr>";
           $count++;
         }
-
+        echo "</table>";
+        
         //update multiPlayer games to show who user played and against and who won/lost
         //add ability to click on a recent opponent to see their profile and and as friend
 
