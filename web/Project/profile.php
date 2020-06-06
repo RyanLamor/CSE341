@@ -24,7 +24,7 @@
   $singlePlayerGames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   $stmt = $db->prepare('SELECT m.name, gh.score, gh.time, gh.datecreated FROM maps m, users u, multiplayergamehistory gh
-    WHERE gh.player = u.user_id
+    WHERE gh.player1 = u.user_id
     AND u.user_id = :user_id
     AND gh.map_id = m.map_id
     ORDER BY gh.datecreated');
