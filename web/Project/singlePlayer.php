@@ -33,11 +33,6 @@
     $stmt->bindValue(':time', $time);
     $stmt->bindValue(':date', date("Y/m/d"));
     $stmt->execute();
-
-    echo '<script src="updateHighScores.js"></script>';
-    echo '<script type="javascript">',
-     'updateHighScores();',
-     '</script>';
   }
   catch (Exception $ex){
       echo "Error with DB. Details: $ex";
@@ -50,8 +45,9 @@
 <head>
   <title>Single Player Game</title>
   <?php include 'head.php';?>
+  <script src="updateHighScores.js"></script>
 </head>
-<body>
+<body onload="updateHighScores()">
   <div class="main">
     <?php
       echo '<h2>' . $screen_name . '\'s Game </h2>';
