@@ -39,24 +39,27 @@
       <?php
         echo "<h1>" . $screen_name . "</h1>";
         echo "<h2>Recent Games Played</h2>";
-        echo "Map Name \tScore \tTime \tDate";
-        echo "<table border='1'>";
-        foreach ($rows as $row){
-          echo "<tr>";
-            foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-                echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function.
-            }
-          echo "</tr>";
-        }
-        echo "</table>";
-
-          //echo "<p>" . $row['name'] . " " . $row['score'] . " " . $row['time'] . " " . $row['datecreated'] . "</p>";
-        //}
-
-        //update to display multiplayer Games
-        //update to show list of friends
       ?>
     </header>
+  </div>
+
+  <div class="main">
+    <?php
+      echo "<table class='highScoreTable' border='1'>";
+      echo "<tr><th>Map Name</th><th>Score</th><th>Time</th><th>Date</th>";
+      foreach ($rows as $row){
+        echo "<tr>";
+          foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+              echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function.
+          }
+        echo "</tr>";
+      }
+      echo "</table>";
+
+
+      //update to display multiplayer Games
+      //update to show list of friends
+    ?>
   </div>
 
 </body>
