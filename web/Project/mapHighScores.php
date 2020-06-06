@@ -27,13 +27,4 @@
   echo "</table>";
 
   echo '<a href="highScores.html" class="btn btn-light">Go Back</a>';
-
-  //get array of multiplayer highscores for current map
-  $stmt = $db->prepare('SELECT multiplayerhighscores FROM maps WHERE map_id=:map_id');
-  $stmt->bindValue(':map_id', $Map_id);
-  $stmt->execute();
-
-  $games = $stmt->fetch();
-
-  var_dump($games);
  ?>
