@@ -18,18 +18,18 @@
         $statement = $db->prepare('UPDATE singleplayergamehistory SET ishighscore = true
                                    WHERE game_id IN (SELECT game_id FROM singleplayergamehistory
                                                      ORDER  BY score DESC
-                                                     WHERE map_id = :map_id
+                                                     WHERE map_id=:map_id
                                                      LIMIT  10)');
-        $statement->bindValue('map_id', $map['map_id']);
+        $statement->bindValue(':map_id', $map['map_id']);
         $statement->execute();
 
         //multiPlayer games
         $statement = $db->prepare('UPDATE multiplayergamehistory SET ishighscore = true
                                    WHERE game_id IN (SELECT game_id FROM multiplayergamehistory
                                                      ORDER  BY score DESC
-                                                     WHERE map_id = :map_id
+                                                     WHERE map_id=:map_id
                                                      LIMIT  10)');
-        $statement->bindValue('map_id', $map['map_id']);
+        $statement->bindValue(':map_id', $map['map_id']);
         $statement->execute();
       }
 
