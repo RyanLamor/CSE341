@@ -12,8 +12,8 @@
     </header>
   </div>
 
-  <div>
-    <form action="createUser.php" method="post">
+  <div class="main">
+    <form class='loginForm' action="createUser.php" method="post">
       <input id="userName" type="text" name="username" placeholder="Username"><br>
       <input id="screenName" type="text" name="screen_name" placeholder="Screen Name"><br>
       <input id="userPass" type="text" name="password" placeholder="Password">
