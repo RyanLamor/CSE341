@@ -1,0 +1,20 @@
+1. Project Title / One sentence description:
+Data Verification Tool
+
+2. The Heroku URL for your web application:
+https://mighty-bastion-58767.herokuapp.com/ponder05.php?
+
+3. The GitHub URL for your source code repository:
+https://github.com/SokimMan/cs313
+
+4. A link to the SQL file that contains the commands used to create your tables (e.g. a link to the myDb.sql file at GitHub, or something similar).
+https://github.com/SokimMan/cs313/blob/master/db/myDb.sql
+
+5. Please provide a brief description of what your project does and how to use the application. Make sure to include any required information like a username and password.
+
+Welcome to the Contacts management tool, we have two databases of Contacts: Salesforce and Dynamics. Using the buttons on the main page you can view the contents of the database, modify contacts through the use of the ID for the contact and add new contacts. I am doing something similar to this for my job. We have business contacts in an old system (Dynamics) and have recently ported them all to Salesforce a new software platform. I am using SQL to verify that all the contacts ported correctly. I ran out of time to implement an inner join that would return all the contacts that matched in both databases but I think this is enough for most of the requirements for the project. You can also see in my db file the SQL command for the join.
+
+
+6. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+A button that implements and displays the Inner Join in my SQL file.
