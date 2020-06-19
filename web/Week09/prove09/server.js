@@ -1,7 +1,26 @@
 const express = require('express')
-const app = express()
-const port = process.env.PORT || 8888
+const path = require('path')
+const PORT = process.env.PORT || 5000
 
-app.get('/', (req, res) => res.send('Hello World!'))
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .post('/getRate', getData)
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+function getData(req,res){
+  const weight = req.query.weight;
+  const mailType = req.query.mailType;
+
+  calcRate(res, weight, mailType)
+}
+
+function calcRate(res, wieght, mailType){
+
+  var cost = 100;
+
+  const params = {weight: weight, mailType: mailType, cost: cost}
+
+  res.render('pages/poastageRate', params);
+}
